@@ -131,3 +131,255 @@ Launch job dispatched .. 93330654.gm-1r16-n04.guillimin.clumeq.ca
 
 
 qsub -N larger_1.t -o /gs/scratch/chopper/test3/64workers_size1000_200gens/qsub_launching_output_sw-r-n_larger_1.t_June-22-2017-h23m24s27.txt -e /gs/scratch/chopper/test3/64workers_size1000_200gens/qsub_launching_error_sw-r-n_larger_1.t_June-22-2017-h23m24s27.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93330598
+======================================
+June-22-2017-h23m49s42
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/test4/larger_1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93332492.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N larger_1.t -o /gs/scratch/chopper/test4/64workers_size1000_200gens/qsub_simulation_output_lg-r-n_larger_1.t_June-22-2017-h23m49s42.txt -e /gs/scratch/chopper/test4/64workers_size1000_200gens/qsub_simulation_error_lg-r-n_larger_1.t_June-22-2017-h23m49s42.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93332542.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N larger_1.t -o /gs/scratch/chopper/test4/64workers_size1000_200gens/qsub_launching_output_lg-r-n_larger_1.t_June-22-2017-h23m49s42.txt -e /gs/scratch/chopper/test4/64workers_size1000_200gens/qsub_launching_error_lg-r-n_larger_1.t_June-22-2017-h23m49s42.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93332492
+======================================
+June-23-2017-h00m09s26
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/test4/larger_1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93333974.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N larger_1.t -o /gs/scratch/chopper/test4/64workers_size1000_200gens/qsub_simulation_output_lg-r-n_larger_1.t_June-23-2017-h00m09s26.txt -e /gs/scratch/chopper/test4/64workers_size1000_200gens/qsub_simulation_error_lg-r-n_larger_1.t_June-23-2017-h00m09s26.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93334215.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N larger_1.t -o /gs/scratch/chopper/test4/64workers_size1000_200gens/qsub_launching_output_lg-r-n_larger_1.t_June-23-2017-h00m09s26.txt -e /gs/scratch/chopper/test4/64workers_size1000_200gens/qsub_launching_error_lg-r-n_larger_1.t_June-23-2017-h00m09s26.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93333974
+======================================
+June-23-2017-h00m56s06
+======================================
+
+len(configs)==0; I will not start a new job. Goodbye
+
+======================================
+June-23-2017-h02m27s16
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/grow1/grow1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93346650.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_simulation_output_lg-r-n_grow1.txt_June-23-2017-h02m27s16.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_simulation_error_lg-r-n_grow1.txt_June-23-2017-h02m27s16.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93346849.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_launching_output_lg-r-n_grow1.txt_June-23-2017-h02m27s16.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_launching_error_lg-r-n_grow1.txt_June-23-2017-h02m27s16.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93346650
+======================================
+June-23-2017-h03m32s34
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/grow1/grow1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93351499.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_simulation_output_sw-r-n_grow1.txt_June-23-2017-h03m32s34.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_simulation_error_sw-r-n_grow1.txt_June-23-2017-h03m32s34.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93351622.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_launching_output_sw-r-n_grow1.txt_June-23-2017-h03m32s34.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_launching_error_sw-r-n_grow1.txt_June-23-2017-h03m32s34.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93351499
+======================================
+June-23-2017-h03m38s11
+======================================
+
+len(configs)==0; I will not start a new job. Goodbye
+
+======================================
+June-23-2017-h08m00s35
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/grow1/grow1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93382181.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_simulation_output_lg-r-n_grow1.txt_June-23-2017-h08m00s35.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_simulation_error_lg-r-n_grow1.txt_June-23-2017-h08m00s35.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93382189.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_launching_output_lg-r-n_grow1.txt_June-23-2017-h08m00s35.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_launching_error_lg-r-n_grow1.txt_June-23-2017-h08m00s35.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93382181
+======================================
+June-23-2017-h09m13s29
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/grow1/grow1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93387426.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_simulation_output_sw-r-n_grow1.txt_June-23-2017-h09m13s29.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_simulation_error_sw-r-n_grow1.txt_June-23-2017-h09m13s29.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93387577.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_launching_output_sw-r-n_grow1.txt_June-23-2017-h09m13s29.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_launching_error_sw-r-n_grow1.txt_June-23-2017-h09m13s29.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93387426
+======================================
+June-23-2017-h10m31s07
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/grow1/grow1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93394551.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_simulation_output_sw-r-n_grow1.txt_June-23-2017-h10m31s07.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_simulation_error_sw-r-n_grow1.txt_June-23-2017-h10m31s07.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93394562.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_launching_output_sw-r-n_grow1.txt_June-23-2017-h10m31s07.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_launching_error_sw-r-n_grow1.txt_June-23-2017-h10m31s07.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93394551
+======================================
+June-23-2017-h11m49s27
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/grow1/grow1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93397321.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_simulation_output_sw-r-n_grow1.txt_June-23-2017-h11m49s27.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_simulation_error_sw-r-n_grow1.txt_June-23-2017-h11m49s27.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93397335.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_launching_output_sw-r-n_grow1.txt_June-23-2017-h11m49s27.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_launching_error_sw-r-n_grow1.txt_June-23-2017-h11m49s27.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93397321
+======================================
+June-23-2017-h12m58s42
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/grow1/grow1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93401660.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_simulation_output_sw-r-n_grow1.txt_June-23-2017-h12m58s42.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_simulation_error_sw-r-n_grow1.txt_June-23-2017-h12m58s42.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93401704.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_launching_output_sw-r-n_grow1.txt_June-23-2017-h12m58s42.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_launching_error_sw-r-n_grow1.txt_June-23-2017-h12m58s42.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93401660
+======================================
+June-23-2017-h14m05s37
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/grow1/grow1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93404299.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_simulation_output_sw-r-n_grow1.txt_June-23-2017-h14m05s37.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_simulation_error_sw-r-n_grow1.txt_June-23-2017-h14m05s37.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93404322.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_launching_output_sw-r-n_grow1.txt_June-23-2017-h14m05s37.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_launching_error_sw-r-n_grow1.txt_June-23-2017-h14m05s37.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93404299
+======================================
+June-23-2017-h15m26s27
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/grow1/grow1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93407829.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_simulation_output_sw-r-n_grow1.txt_June-23-2017-h15m26s27.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_simulation_error_sw-r-n_grow1.txt_June-23-2017-h15m26s27.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93407841.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_launching_output_sw-r-n_grow1.txt_June-23-2017-h15m26s27.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_launching_error_sw-r-n_grow1.txt_June-23-2017-h15m26s27.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93407829
+======================================
+June-23-2017-h16m58s54
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/data/input/grow1/grow1.txt
+PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/bin:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/bin:/software/CentOS-6/compilers/gcc-4.9.1/bin:/software/tools/datamover:/home/chopper/python3.5.1/bin:/opt/torque/x86_64/bin:/usr/lib64/qt-3.3/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lpp/mmfs/bin:/sb/software/tools/scripts:/usr/lpp/mmfs/bin:/usr/lpp/mmfs/bin:/home/chopper/bin
+LD_LIBRARY_PATH  = /software/CentOS-6/tools/openmpi-1.8.3-gcc/lib:/opt/torque/x86_64/lib:/software/compilers/Intel/2015-15.0/composer_xe_2015.0.090/mkl/lib/intel64:/software/CentOS-6/compilers/gcc-4.9.1/lib64:/software/CentOS-6/compilers/gcc-4.9.1/lib:/home/chopper/python3.5.1/lib::
+Simulation job dispatched .. 93413384.gm-1r16-n04.guillimin.clumeq.ca
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_simulation_output_lg-r-n_grow1.txt_June-23-2017-h16m58s54.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_simulation_error_lg-r-n_grow1.txt_June-23-2017-h16m58s54.txt -V /home/chopper/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 93413399.gm-1r16-n04.guillimin.clumeq.ca
+
+
+qsub -N grow1.txt -o /gs/scratch/chopper/grow1/10to1000/qsub_launching_output_lg-r-n_grow1.txt_June-23-2017-h16m58s54.txt -e /gs/scratch/chopper/grow1/10to1000/qsub_launching_error_lg-r-n_grow1.txt_June-23-2017-h16m58s54.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93413384

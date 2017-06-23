@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -l procs=65
+#PBS -l procs=128
 #PBS -l walltime=01:00:00
 #PBS -A ymj-002-aa
 #PBS -M corbin.hopper@mail.mcgill.ca
@@ -9,8 +9,8 @@ module load gcc/4.9.1
 module load MKL/11.2
 module load openmpi/1.8.3-gcc
 
-echo 'simulating on Guillimin: python '$SIMULATION_BATCH_ROOT' 65 '$SIMULATION_CONFIGS
+echo 'simulating on Guillimin: python '$SIMULATION_BATCH_ROOT' 128 '$SIMULATION_CONFIGS
 
 cd $SIMULATION_DIRECTORY
 
-python $SIMULATION_BATCH_ROOT 65 $SIMULATION_CONFIGS
+python $SIMULATION_BATCH_ROOT 128 $SIMULATION_CONFIGS
