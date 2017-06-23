@@ -1,0 +1,7 @@
+GitEvoNet
+mpi_test.py
+python3.5.1
+root_mpi.log
+venv
+.*
+lib/bashrc.txt
