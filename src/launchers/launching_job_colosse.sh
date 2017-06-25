@@ -2,8 +2,6 @@
 #PBS -l nodes=1:ppn=8 
 #PBS -l walltime=00:10:00
 #PBS -A ymj-002-aa
-# PBS -M mosha5581@gmail.com
-# PBS -m abe
 #PBS -q test
 
 module load compilers/intel/14.0
