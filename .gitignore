@@ -7,5 +7,6 @@ venv
 lib/bashrc.txt
 src/launchers/*
 src/launchers/launcher_batch.log
+src/evolve_root.py
 simulators/*
 safe_from_git/*

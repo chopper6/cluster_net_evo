@@ -571,3 +571,23 @@ Launch job dispatched .. 93543155.gm-1r16-n04.guillimin.clumeq.ca
 
 
 qsub -N grow2.txt -o /gs/scratch/chopper/grow2/10to1000/qsub_launching_output_sw-r-n_grow2.txt_June-24-2017-h22m28s50.txt -e /gs/scratch/chopper/grow2/10to1000/qsub_launching_error_sw-r-n_grow2.txt_June-24-2017-h22m28s50.txt -V /home/chopper/src/launchers/launching_job_guillimin.sh -W depend=afterany:93543127
+======================================
+June-25-2017-h06m51s54
+======================================
+
+os.environ['SIMULATION_SCRIPT']   = /home/chopper/cluster_net_evo/src/evolve_root.py
+os.environ['SIMULATION_BATCH_ROOT']   = /home/chopper/cluster_net_evo/src/simulators/BATCH_ROOT.py
+os.environ['LAUNCHING_SCRIPT']    = /home/chopper/cluster_net_evo/src/launchers/launcher.py
+os.environ['SIMULATION_DIRECTORY']= /home/chopper/cluster_net_evo/src/simulators
+os.environ['LAUNCHING_DIRECTORY'] = /home/chopper/cluster_net_evo/src/launchers/
+os.environ['SIMULATION_CONFIGS']  = /home/chopper/cluster_net_evo/data/input/colosse/grow/grow.txt
+PATH  = /software6/compilers/intel/composer_xe_2013_sp1.0.080/mkl/tools/intel64:/software6/compilers/intel/composer_xe_2013_sp1.0.080/mkl/bin/intel64:/software6/mpi/openmpi/1.6.5_intel/bin:/software6/compilers/intel/composer_xe_2013_sp1/bin:/software6/compilers/gcc/4.8/bin:/home/chopper/python3.5.1/bin:/home/chopper/git/bin:/clumeq/bin:/home/chopper/python3.5.1/bin:/home/chopper/git/bin:/software6/apps/buildtools/20140527/bin:/software6/apps/moab/moab/bin:/clumeq/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/clumeq/bin:/clumeq/bin
+LD_LIBRARY_PATH  = /software6/compilers/intel/composer_xe_2013_sp1.0.080/mkl/lib/intel64:/software6/mpi/openmpi/1.6.5_intel/lib:/software6/compilers/intel/composer_xe_2013_sp1/lib/intel64:/software6/compilers/gcc/4.8/lib64:/software6/compilers/gcc/4.8/lib:/home/chopper/python3.5.1/lib:/home/chopper/git/lib64:/home/chopper/git/libexec:/home/chopper/python3.5.1/lib:/home/chopper/git/lib64:/home/chopper/git/libexec:/software6/apps/buildtools/20140527/lib64:/software6/apps/buildtools/20140527/lib
+Simulation job dispatched .. 
+I will wait 1 minute before dispatching the Launching job, Please wait ...
+
+qsub -N grow.txt -o /rap/ymj-002-aa/chopper/grow/10to1000/qsub_simulation_output_r-n_grow.txt_June-25-2017-h06m51s54.txt -e /rap/ymj-002-aa/chopper/grow/10to1000/qsub_simulation_error_r-n_grow.txt_June-25-2017-h06m51s54.txt -V /home/chopper/cluster_net_evo/src/launchers/simulation_job_guillimin.sh
+Launch job dispatched .. 
+
+
+qsub -N grow.txt -o /rap/ymj-002-aa/chopper/grow/10to1000/qsub_launching_output_r-n_grow.txt_June-25-2017-h06m51s54.txt -e /rap/ymj-002-aa/chopper/grow/10to1000/qsub_launching_error_r-n_grow.txt_June-25-2017-h06m51s54.txt -V /home/chopper/cluster_net_evo/src/launchers/launching_job_guillimin.sh -W depend=afterany:
