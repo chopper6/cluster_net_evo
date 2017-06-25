@@ -100,9 +100,11 @@ def evolve_from_seed(configs):
             nx.write_edgelist(population[0].net, output_dir + "/nets/" + str(itern))
 
         if (num_grow != 0): #WILL NOT WORK WELL WITH ISLAND ALGO, OR MULT WORKER GENS
-            #ASSUMES GROWTH ONLY FOR 1st HALF
-            rate = int(max_gen/(2*num_grow))
-            if ((itern-start_size) % rate ==0 and itern < (max_gen/2 - start_size*rate)):
+            #NO LONGER: ASSUMES GROWTH ONLY FOR 1st HALF
+            rate = int(max_gen/num_grow)
+            #if ((itern-start_size) % rate ==0 and itern < (max_gen - start_size*rate)):
+            #print("rate = " + str(rate) + ", itern % rate = " + str(itern%rate) + ", itern < " + str (max_gen-start_size*rate))
+            if (itern % rate == 0 and itern < (max_gen-start_size*rate)):
                 for p in range(len(population)):
                     mutate.add_nodes(population[p].net, 1, edge_node_ratio)
 
@@ -146,7 +148,7 @@ def evolve_from_seed(configs):
 
         t_end = time.time()
         t_elapsed = t_end-t_start
-        util.cluster_print(output_dir,"Master finishing after " + str(t_elapsed) + " seconds.\n")
+        if (itern % 100 == 0): util.cluster_print(output_dir,"Master finishing after " + str(t_elapsed) + " seconds.\n")
         estim_wait = watch(configs, itern, num_workers, output_dir, estim_wait)
         population = parse_worker_popn(num_workers, itern, output_dir, num_survive)
         size = len(population[0].net.nodes())
@@ -257,7 +259,7 @@ def watch(configs, itern, num_workers, output_dir, estim_wait):
                     estim_wait = time_elapsed
                     print("master using estim_wait = " + str(estim_wait))
                 if (estim_used == True): print("master updated estim_wait to " + str(estim_wait))
-                util.cluster_print(output_dir,"master continuing after waiting for " + str(time_elapsed) + " seconds, and making " + str(i) + " dir checks.")
+                if (itern % 100 == 0): util.cluster_print(output_dir,"master continuing after waiting for " + str(time_elapsed) + " seconds, and making " + str(i) + " dir checks.")
                 return estim_wait
 
 
