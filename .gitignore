@@ -5,6 +5,7 @@ root_mpi.log
 venv
 .*
 lib/bashrc.txt
-launchers/*
+src/launchers/*
+src/launchers/launcher_batch.log
 simulators/*
 safe_from_git/*
