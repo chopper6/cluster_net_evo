@@ -5,3 +5,5 @@ root_mpi.log
 venv
 .*
 lib/bashrc.txt
+launchers/*
+simulators/*
