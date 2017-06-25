@@ -1,0 +1,73 @@
+#files
+KP_solver_source         = /home/chopper/lib/kp_solvers/DPsolver.c
+KP_solver_binary         = /home/chopper/lib/kp_solvers/minknap.so
+output_directory         = /gs/scratch/chopper/grow2/10to1000
+
+# evolve params
+sampling_rounds_max      = 100
+pressure                 = 100
+tolerance                = 5
+
+#worker, master params
+#debug is a sequential version
+debug = False
+control = None
+
+num_output = 40
+num_net_output = 8
+num_drawings = 1
+num_instance_output = 1
+draw_layout = spring
+max_B_plot = 10
+
+number_of_workers = 128
+num_worker_nets = 1
+max_generations = 2000
+protocol = from seed
+percent_perturb = 0
+
+edge_to_node_ratio = 1.7
+num_grows = 990
+
+percent_survive = 10
+worker_percent_survive = 10
+
+leaf_metric = RGAR
+leaf_operation = sum
+leaf_power = 2
+hub_metric = ETB
+hub_operation = sum all
+fitness_operation = multiply
+
+
+#from init seed configs
+initial_net_type = random
+starting_size = 10
+ending_size = 1001
+crossover_percent = 0
+crossover_frequency = 0
+
+#mutation
+mutation_type = static
+add_edge_mutation_frequency = 0
+remove_edge_mutation_frequency = 0
+rewire_mutation_frequency = 1
+sign_mutation_frequency = 0
+reverse_edge_mutation_frequency = 0
+grow_mutation_frequency = 0
+shrink_mutation_frequency = 0
+
+# Do not worry about the following parameters
+network_file             = /home/2014/choppe1/Documents/EvoNet/virt_workspace/data/output/013_product/ratio8_ETB_contd/nets/2000
+network_name             = Vinayagam
+version                  = v4
+reduction_mode           = reverse
+sampling_rounds          = 1X
+BD_criteria              = both
+advice_upon              = edges
+biased                   = False
+bias_on                  = edges
+bias_distribution        = uniform
+alpha                    = 0.25
+
+use_knapsack             = True

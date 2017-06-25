@@ -3,7 +3,7 @@
 #PBS -l walltime=01:00:00
 #PBS -A ymj-002-aa
 #PBS -q short
-#PBS -M mosha5581@gmail.com
+# PBS -M mosha5581@gmail.com
 # PBS -m abe
 
 module load compilers/intel/14.0
