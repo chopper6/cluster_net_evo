@@ -9,8 +9,8 @@ module load gcc/4.9.1
 module load MKL/11.2
 module load openmpi/1.8.3-gcc
 
-echo 'simulating on Guillimin: python '$SIMULATION_BATCH_ROOT' 128 '$SIMULATION_CONFIGS
+echo 'simulating on Guillimin: python '$SIMULATION_BATCH_ROOT' 64 '$SIMULATION_CONFIGS
 
 cd $SIMULATION_DIRECTORY
 
-python $SIMULATION_BATCH_ROOT 128 $SIMULATION_CONFIGS
+python $SIMULATION_BATCH_ROOT 64 $SIMULATION_CONFIGS
