@@ -21,6 +21,10 @@ def pressurize(configs, net, instance_file_name):
     hub_operator = str(configs['hub_operation'])
     fitness_operator = str(configs['fitness_operation'])
 
+    edge_assignment = str(configs['edge_state'])
+    global_edge_bias = float(configs['global_edge_bias'])
+    edge_distribution = str(configs['edge_state_distribution'])
+
     num_samples_relative = min(max_sampling_rounds, len(net.nodes()) * sampling_rounds)
     num_samples_relative = max(10, int(len(net.nodes())/10))
     if (advice=='nodes'):
@@ -32,7 +36,7 @@ def pressurize(configs, net, instance_file_name):
         return
 
 
-    if (use_kp == 'True'):
+    if (use_kp == 'True' or use_kp == True):
         leaf_fitness, hub_fitness, solo_fitness = 0, 0, 0
         node_data.reset_fitness(net) #not actually used when kp = True
         node_data.reset_BDs(net)
@@ -56,15 +60,20 @@ def pressurize(configs, net, instance_file_name):
 
         return [leaf_fitness, hub_fitness, solo_fitness]
 
-    elif (use_kp == 'False'):
+    elif (use_kp == 'False' or use_kp == False):
         node_data.reset_fitness(net)
 
-        for i in range(num_samples_relative):
-            node_data.reset_BDs(net)
-            reducer.simple_reduction(net, pressure_relative, tolerance, num_samples_relative, configs['advice_upon'], configs['biased'], configs['BD_criteria'], configs['bias_on'])
-            fitness.node_fitness(net, leaf_metric) #poss move this out of loop, ie sum all BDs first
+        #TODO: fix this
+        if (edge_assignment == 'probabilistic'):
+            reducer.prob_reduction(net, global_edge_bias, edge_distribution, configs['biased'], configs['bias_on'])
 
-        node_data.normz_by_num_instances(net, num_samples_relative)
+        elif (edge_assignment == 'experience'):
+            for i in range(num_samples_relative):
+                node_data.reset_BDs(net)
+                reducer.exp_reduction(net, pressure_relative, tolerance, num_samples_relative, configs['advice_upon'], configs['biased'], configs['BD_criteria'], configs['bias_on'])
+                fitness.node_fitness(net, leaf_metric)
+
+        fitness.node_normz(net, num_samples_relative)
         fitness_score = fitness.node_product(net)
 
 

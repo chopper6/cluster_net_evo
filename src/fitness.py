@@ -3,12 +3,15 @@ from operator import attrgetter
 import networkx as nx
 import hub_fitness, leaf_fitness
 
-def eval_fitness(population):
+def eval_fitness(population, fitness_direction):
     #determines fitness of each individual and orders the population by fitness
     for p in range(len(population)):
         population[p].fitness = population[p].fitness_parts[2]
-    
-    population = sorted(population,key=attrgetter('fitness'), reverse=True)  #MAX
+
+    if (fitness_direction == 'max'): population = sorted(population,key=attrgetter('fitness'), reverse=True)
+    elif (fitness_direction == 'min'):  population = sorted(population,key=attrgetter('fitness'))
+    else: print("ERROR in fitness.eval_fitness(): unknown fitness_direction " + str(fitness_direction) + ", population not sorted.")
+
     return population
 
 
@@ -29,6 +32,11 @@ def node_product(net):
         else: fitness_score *= net.node[n]['fitness']
     if (num_0 > 0): print("WARNING: fitness.node_product(): " + str(num_0) + " nodes had 0 fitness out of " + str(len(net.nodes())))
     return fitness_score
+
+def node_normz(net, denom):
+    if (denom != 0):
+        for n in net.nodes():
+            net.node[n]['fitness'] /= denom
 
 #use_kp only
 def kp_instance_properties(a_result, leaf_metric, leaf_operator, leaf_pow, hub_metric, hub_operator, fitness_operator, net, instance_file_name):

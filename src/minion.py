@@ -15,7 +15,7 @@ def work(configs, rank):
     #init, see if cont run
     t_start = time.time()
     while not os.path.isfile(progress):  # master will create this file
-        time.sleep(.5)
+        time.sleep(2)
 
     while not (os.path.getmtime(progress) + .5 < time.time()):  # check that file has not been recently touched
         time.sleep(.5)
@@ -24,38 +24,38 @@ def work(configs, rank):
         with open(progress, 'r') as file:
             line = file.readline()
             if (line == 'Done' or line == 'Done\n'):
-                if (rank == 1 or rank==32 or rank==64): util.cluster_print(output_dir,"Worker #" + str(rank) + " + exiting.")
+                if (rank == 1 or rank==32 or rank==63): util.cluster_print(output_dir,"Worker #" + str(rank) + " + exiting.")
                 return  # no more work to be done
             else:
                 gen = int(line.strip())
                 #util.cluster_print(output_dir,"Worker #" + str(rank) + " got gen " + str(gen) + " from progress file.")
 
     t_end = time.time()
-    if ((rank == 1 or rank == 32 or rank == 64 or rank == 128) and gen % 100 == 0): util.cluster_print(output_dir,"worker #" + str(rank) + " finished init in " + str(t_end-t_start) + " seconds.")
+    if ((rank == 1 or rank == 32 or rank == 63 or rank == 128) and gen % 100 == 0): util.cluster_print(output_dir,"worker #" + str(rank) + " finished init in " + str(t_end-t_start) + " seconds.")
 
-    estim_time = 5
+    estim_time = 4
     while gen < max_gen:
         t_start = time.time()
 
         worker_file = str(output_dir) + "/to_workers/" + str(gen) + "/" + str(rank)
         #util.cluster_print(output_dir,"worker #" + str(rank) + " looking for file: " + str(worker_file))
         i=1
-        first = True
+        num_estim = 0
         while not os.path.isfile(worker_file):
-            if (first==True):
-                time.sleep(estim_time)
-                first = False
+            if (num_estim < 4):
+                time.sleep(estim_time/4)
+                num_estim += 1
             else: 
-                time.sleep(.4)
-                estim_time += .4
+                time.sleep(4)
+                estim_time += 4
             i+=1
 
         while not (os.path.getmtime(worker_file) + .4 < time.time()):
-            time.sleep(.2)
+            time.sleep(.5)
 
         t_end = time.time()
         t_elapsed = t_end - t_start
-        if ((rank == 1 or rank==32 or rank==64 or rank==128) and gen % 100 == 0): util.cluster_print(output_dir,"Worker #" + str(rank) + " starting evolution after waiting " + str(t_elapsed) + " seconds and checking dir " + str(i) + " times. Starts at gen " + str(gen))
+        if ((rank == 1 or rank==32 or rank==63 or rank==128)): util.cluster_print(output_dir,"Worker #" + str(rank) + " starting evolution after waiting " + str(t_elapsed) + " seconds and checking dir " + str(i) + " times. Starts at gen " + str(gen))
         evolve_minion(worker_file, gen, rank, output_dir)
         gen+=1
 
@@ -74,6 +74,7 @@ def evolve_minion(worker_file, gen, rank, output_dir):
     max_gen = int(configs['max_generations'])
     control = configs['control']
     if (control == "None"): control = None
+    fitness_direction = str(configs['fitness_direction'])
 
     node_edge_ratio = float(configs['edge_to_node_ratio'])
 
@@ -104,7 +105,7 @@ def evolve_minion(worker_file, gen, rank, output_dir):
             else: util.cluster_print(output_dir,"ERROR in minion(): unknown control config: " + str(control))
 
         old_popn = population
-        population = fitness.eval_fitness(old_popn)
+        population = fitness.eval_fitness(old_popn, fitness_direction)
         del old_popn
         #debug(population,worker_ID, output_dir)
         curr_gen += 1
@@ -121,7 +122,7 @@ def evolve_minion(worker_file, gen, rank, output_dir):
 
     t_end = time.time()
     time_elapsed = t_end - t_start
-    if (rank == 1 or rank==32 or rank==64): util.cluster_print(output_dir,"Worker #" + str(rank) + " finishing after " + str(time_elapsed) + " seconds")
+    if (rank == 1 or rank==32 or rank==63): util.cluster_print(output_dir,"Worker #" + str(rank) + " finishing after " + str(time_elapsed) + " seconds")
 
 
 def write_out_worker(worker_file, population, num_return):
